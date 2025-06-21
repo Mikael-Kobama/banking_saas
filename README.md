@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💳 Banking App
 
-## Getting Started
+Projeto desenvolvido por **Mikael Kobama**, com o objetivo de construir uma aplicação bancária moderna, responsiva e com foco em design minimalista e interações refinadas.
 
-First, run the development server:
+A interface foi **inspirada no projeto original do Adrian Hajdin**, mas toda a implementação foi feita do zero, com adaptações, organização própria e configurações atualizadas para o ecossistema moderno do Next.js e Tailwind CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js** 14 (App Router + TypeScript)
+- **Tailwind CSS** 3.4 (com configuração via `tailwind.config.ts`)
+- **React** 18
+- **Radix UI** (acessibilidade e componentes interativos)
+- **React ChartJS 2** + **Chart.js**
+- **Lucide React** (ícones)
+- **Zod**, **React Hook Form**, **Class Variance Authority** e outros
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎯 Objetivo do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+- Construir uma interface bancária moderna com **design limpo e responsivo**
+- Explorar o **App Router** do Next.js com boas práticas de estruturação
+- Aplicar animações, acessibilidade e composição de componentes reutilizáveis
+- Praticar tipagens fortes com **TypeScript**
+- Reforçar a configuração avançada de **Tailwind CSS**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Estrutura do Projeto
