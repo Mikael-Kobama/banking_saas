@@ -1,37 +1,29 @@
-"use client";
+import AnimatedCounter from "./AnimatedCounter";
+import DoughnutChart from "./DoughnutChart";
 
-import { useSearchParams, useRouter } from "next/navigation";
-
-import { cn, formUrlQuery } from "@/lib/utils";
-
-export const BankTabItem = ({ account, appwriteItemId }: BankTabItemProps) => {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const isActive = appwriteItemId === account?.appwriteItemId;
-
-  const handleBankChange = () => {
-    const newUrl = formUrlQuery({
-      params: searchParams.toString(),
-      key: "id",
-      value: account?.appwriteItemId,
-    });
-    router.push(newUrl, { scroll: false });
-  };
-
+const TotalBalanceBox = ({
+  accounts = [],
+  totalBanks,
+  totalCurrentBalance,
+}: TotalBalanceBoxProps) => {
   return (
-    <div
-      onClick={handleBankChange}
-      className={cn(`banktab-item`, {
-        " border-blue-600": isActive,
-      })}
-    >
-      <p
-        className={cn(`text-16 line-clamp-1 flex-1 font-medium text-gray-500`, {
-          " text-blue-600": isActive,
-        })}
-      >
-        {account.name}
-      </p>
-    </div>
+    <section className="total-balance">
+      <div className="total-balance-chart">
+        <DoughnutChart accounts={accounts} />
+      </div>
+
+      <div className="flex flex-col gap-6">
+        <h2 className="header-2">Bank Accounts: {totalBanks}</h2>
+        <div className="flex flex-col gap-2">
+          <p className="total-balance-label">Total Current Balance</p>
+
+          <div className="total-balance-amount flex-center gap-2">
+            <AnimatedCounter amount={totalCurrentBalance} />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
+
+export default TotalBalanceBox;
